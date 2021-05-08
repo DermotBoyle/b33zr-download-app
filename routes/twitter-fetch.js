@@ -15,11 +15,19 @@ const twitterURL = (app, fs) => {
 				headers: { Authorization: TOKEN }
 			})
 				.then((res) => res.json())
-				.then((body) => res.send(body));
+				.then((body) => {
+					const video = processData(body);
+					return res.send(video);
+				});
 		} catch (error) {
 			res.send(error);
 		}
 	});
+};
+
+const processData = (body) => {
+	const VIDEO_URL = body.extended_entities.media[0].video_info.variants[1].url;
+	return VIDEO_URL;
 };
 
 module.exports = twitterURL;

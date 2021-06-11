@@ -1,8 +1,7 @@
 const fetch = require("node-fetch");
 const cors = require("cors");
-const localENV = require("dotenv").config();
 
-const { TOKEN } = localENV.parsed;
+const { TOKEN } = process.env;
 
 const twitterURL = (app, fs) => {
 	// READ

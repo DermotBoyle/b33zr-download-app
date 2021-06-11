@@ -3,11 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "npm start",
-    "start": "serve -s build",
-    "build": "npm build",
-    "heroku-postbuild": "npm run build"
-},
+    "start": "nodemon ./server.js localhost 3001"
+  },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",

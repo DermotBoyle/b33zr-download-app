@@ -4,6 +4,8 @@ const localENV = require("dotenv").config();
 
 const { TOKEN } = localENV.parsed;
 
+console.log(TOKEN);
+
 const twitterURL = (app, fs) => {
 	// READ
 	app.get("/twitter/:id", cors(), (req, res) => {
@@ -26,6 +28,7 @@ const twitterURL = (app, fs) => {
 };
 
 const processData = (body) => {
+	console.log(body);
 	const VIDEO_URL = body.extended_entities.media[0].video_info.variants[1].url;
 	return VIDEO_URL;
 };

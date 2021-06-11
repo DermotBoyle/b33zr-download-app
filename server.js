@@ -11,7 +11,7 @@ app.use(cors());
 // (we'll be using this later to serve our JSON files
 const fs = require("fs");
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // port process.env.PORT ||
 

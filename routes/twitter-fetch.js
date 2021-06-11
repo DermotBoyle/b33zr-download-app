@@ -4,8 +4,6 @@ const localENV = require("dotenv").config();
 
 const { TOKEN } = localENV.parsed;
 
-console.log(TOKEN);
-
 const twitterURL = (app, fs) => {
 	// READ
 	app.get("/twitter/:id", cors(), (req, res) => {

@@ -3,11 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "npm start",
     "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "build": "npm build",
     "heroku-postbuild": "npm run build"
 },
   "dependencies": {

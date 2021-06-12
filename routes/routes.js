@@ -1,4 +1,4 @@
-const twitterURL = require("./twitter-fetch");
+const twitterURL = require("./twitter-fetch").default;
 
 const appRouter = (app, fs) => {
 	app.get("/", (req, res) => {

@@ -7,6 +7,7 @@ const twitterURL = (app, fs) => {
 	// READ
 	app.get("/twitter/:id", cors(), (req, res) => {
 		const tweetId = req.params["id"];
+		console.log(TOKEN);
 		try {
 			const twitterURL = "https://api.twitter.com/1.1/statuses/show.json?" + tweetId;
 			fetch(twitterURL, {
